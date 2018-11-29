@@ -5,6 +5,9 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Schema;
+using System.Xml.Serialization;
 
 namespace ObjectPersistence
 {
@@ -99,6 +102,33 @@ namespace ObjectPersistence
             }
         }
 
+        public class E : IXmlSerializable
+        {
+            public int X = 90;
+            private int Y = 200;
+
+            public XmlSchema GetSchema()
+            {
+                return null;
+            }
+
+            public void ReadXml(XmlReader reader)
+            {
+                
+            }
+
+            public void WriteXml(XmlWriter writer)
+            {
+                writer.WriteStartElement("X");
+                writer.WriteAttributeString("Y", this.Y.ToString());
+                writer.WriteStartElement("value");
+                writer.WriteElementString("data", this.X.ToString());
+
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+            }
+        }
+
         static void Main(string[] args)
         {
             var cObject = new C();
@@ -135,7 +165,15 @@ namespace ObjectPersistence
                 xmlSerializer.Serialize(fileStream.BaseStream, cTarget);
             }
 
-            //2. Using Json Serialize
+            //2. Using XML serialization
+            var eTarget = new E();
+            xmlSerializer = System.Xml.Serialization.XmlSerializer.FromTypes(new Type[] { typeof(E) }).FirstOrDefault();
+            using (var fileStream = new StreamWriter(@"../../E_CustomXMLSerialization_Shallow.xml", false))
+            {
+                xmlSerializer.Serialize(fileStream.BaseStream, eTarget);
+            }
+
+            //3. Using Json Serialize
             var cJsonTarget = new C_NoAttribute();
             Newtonsoft.Json.JsonSerializer jsonSerializer = new Newtonsoft.Json.JsonSerializer();
 
