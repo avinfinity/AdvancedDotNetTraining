@@ -1,0 +1,16 @@
+﻿!load sos.dll
+		!clrstack -a      -- Clear the stack
+		!dumparray  "address of array object"    -- Dump the array Content
+		!name2ee GCApplication.exe GCApplication.Program.Main --{Name of module(Project name) followed by main method}  -- Status of method whether called(jitted) or not
+		
+		!do -- dump object
+		!objsize  -- including references
+		!do
+		!eeheap -gc
+		!dumpheap -stat
+
+		!finalizequeue
+
+		!load sosex.dll
+
+		!frq -> F Reachable queue
