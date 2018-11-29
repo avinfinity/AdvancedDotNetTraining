@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTypes", "TestConsole
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectValidation_AspectOrientation", "ObjectValidation\ObjectValidation_AspectOrientation.csproj", "{939CF6BB-30A9-4266-BCFD-8F7E2FB741C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parallel", "..\TestParallel\Parallel.csproj", "{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiffrentDomains", "ConsoleApplication1\DiffrentDomains.csproj", "{C0F9A837-4BBB-4B57-9B86-0A69E57730C7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theading_Moniters", "Theading\Theading_Moniters.csproj", "{50EA625A-7D01-4AB0-99A4-8D27C5F2D670}"
@@ -22,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderstandGC", "UnderstandingGC\UnderstandGC.csproj", "{31D30F04-53F5-46B7-8D50-7AEEF3436259}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dispose_Pattern", "Dispose_Pattern\Dispose_Pattern.csproj", "{A3ED09C8-5ACE-43DF-B61E-4D80AA99FBDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parallel", "TestParallel\Parallel.csproj", "{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,14 +47,6 @@ Global
 		{939CF6BB-30A9-4266-BCFD-8F7E2FB741C2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{939CF6BB-30A9-4266-BCFD-8F7E2FB741C2}.Release|x86.ActiveCfg = Release|Any CPU
 		{939CF6BB-30A9-4266-BCFD-8F7E2FB741C2}.Release|x86.Build.0 = Release|Any CPU
-		{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}.Debug|x86.Build.0 = Debug|Any CPU
-		{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}.Release|x86.ActiveCfg = Release|Any CPU
-		{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}.Release|x86.Build.0 = Release|Any CPU
 		{C0F9A837-4BBB-4B57-9B86-0A69E57730C7}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{C0F9A837-4BBB-4B57-9B86-0A69E57730C7}.Debug|x86.ActiveCfg = Debug|x86
 		{C0F9A837-4BBB-4B57-9B86-0A69E57730C7}.Debug|x86.Build.0 = Debug|x86
@@ -107,6 +99,14 @@ Global
 		{A3ED09C8-5ACE-43DF-B61E-4D80AA99FBDC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A3ED09C8-5ACE-43DF-B61E-4D80AA99FBDC}.Release|x86.ActiveCfg = Release|Any CPU
 		{A3ED09C8-5ACE-43DF-B61E-4D80AA99FBDC}.Release|x86.Build.0 = Release|Any CPU
+		{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}.Debug|x86.Build.0 = Debug|Any CPU
+		{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}.Release|x86.ActiveCfg = Release|Any CPU
+		{DAEC41D9-BB9E-4D08-BB16-11EF56C1636B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
