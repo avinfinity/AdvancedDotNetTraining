@@ -130,9 +130,21 @@ namespace ObjectPersistence
             //1. Using XML serialization
             var cTarget = new C_NoAttribute();
             var xmlSerializer = System.Xml.Serialization.XmlSerializer.FromTypes(new Type[] { typeof(C_NoAttribute) }).FirstOrDefault();
-            using (var fileStream = new StreamWriter(@"../../ MY_OBJ_Shallow.xml", false))
+            using (var fileStream = new StreamWriter(@"../../MY_OBJ_Shallow.xml", false))
             {
                 xmlSerializer.Serialize(fileStream.BaseStream, cTarget);
+            }
+
+            //2. Using Json Serialize
+            var cJsonTarget = new C_NoAttribute();
+            Newtonsoft.Json.JsonSerializer jsonSerializer = new Newtonsoft.Json.JsonSerializer();
+
+            using (var streamWriter = new StreamWriter(@"../../MY_OBJ_Shallow.json", false))
+            {
+                using (Newtonsoft.Json.JsonWriter writer = new Newtonsoft.Json.JsonTextWriter(streamWriter))
+                {
+                    jsonSerializer.Serialize(writer, cJsonTarget);
+                }
             }
 
             Console.ReadKey();
